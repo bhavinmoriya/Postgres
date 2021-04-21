@@ -38,6 +38,11 @@ GROUP BY FACID
 HAVING SUM(SLOTS) > 1000
 ORDER BY FACID
 
+SELECT NAME, B.starttime FROM CD.facilities AS F
+JOIN CD.bookings AS B
+ON B.FACID = F.FACID
+WHERE DATE(B.starttime) = '2012-09-21' AND NAME ILIKE '%TENNIS%C%'
+
 
 
 SELECT starttime, M.firstname, M.surname FROM CD.bookings AS B
