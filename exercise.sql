@@ -42,6 +42,7 @@ SELECT NAME, B.starttime FROM CD.facilities AS F
 JOIN CD.bookings AS B
 ON B.FACID = F.FACID
 WHERE DATE(B.starttime) = '2012-09-21' AND NAME ILIKE '%TENNIS%C%'
+ORDER BY B.starttime
 
 
 
